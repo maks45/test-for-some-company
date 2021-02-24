@@ -20,8 +20,8 @@ class _RandomBackgroundWidgetState extends State<RandomBackgroundWidget> {
 
   @override
   void initState() {
-    _backgroundColor = widget.startColor ?? _getRandomColor();
     super.initState();
+    _backgroundColor = widget.startColor ?? _getRandomColor();
   }
 
   @override
