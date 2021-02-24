@@ -35,8 +35,8 @@ class _RandomBackgroundWidgetState extends State<RandomBackgroundWidget> {
   }
 
   Color _getRandomColor() {
-    Color _randomColor =
+    var randomColor =
         Color((Random().nextDouble() * 0xFFFFFF).toInt()).withOpacity(1.0);
-    return _randomColor != _backgroundColor ? _randomColor : _getRandomColor();
+    return randomColor != _backgroundColor ? randomColor : _getRandomColor();
   }
 }
