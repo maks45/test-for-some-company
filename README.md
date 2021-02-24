@@ -1,3 +1,3 @@
 # test_app
 
-test task for some company :)
+test task for some company
