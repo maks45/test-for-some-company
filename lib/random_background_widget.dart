@@ -6,7 +6,8 @@ class RandomBackgroundWidget extends StatefulWidget {
   final Widget child;
   final Color startColor;
 
-  const RandomBackgroundWidget({Key key, this.child, this.startColor}) : super(key: key);
+  const RandomBackgroundWidget({Key key, this.child, this.startColor})
+      : super(key: key);
 
   @override
   State<StatefulWidget> createState() {
@@ -33,6 +34,9 @@ class _RandomBackgroundWidgetState extends State<RandomBackgroundWidget> {
     );
   }
 
-  _getRandomColor() =>
-      Color((Random().nextDouble() * 0xFFFFFF).toInt()).withOpacity(1.0);
+  Color _getRandomColor() {
+    Color _randomColor =
+        Color((Random().nextDouble() * 0xFFFFFF).toInt()).withOpacity(1.0);
+    return _randomColor != _backgroundColor ? _randomColor : _getRandomColor();
+  }
 }
